@@ -42,6 +42,8 @@ class Connector : noncopyable,
 
   const InetAddress& serverAddress() const { return serverAddr_; }
 
+  //add by wangzhen 20170325
+  void setServerAddress(const InetAddress& serverAddr) {serverAddr_ = serverAddr;}
  private:
   enum States { kDisconnected, kConnecting, kConnected };
   static const int kMaxRetryDelayMs = 30*1000;
