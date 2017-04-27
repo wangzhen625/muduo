@@ -179,3 +179,9 @@ void TcpClient::removeConnection(const TcpConnectionPtr& conn)
   }
 }
 
+void TcpClient::resetServerAddress(const InetAddress& serverAddr)
+{
+  connector_->setServerAddress(serverAddr);
+}
+
+

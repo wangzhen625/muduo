@@ -49,6 +49,9 @@ class TcpClient : noncopyable
   const string& name() const
   { return name_; }
 
+  /// add by wangzhen 20170325
+  void resetServerAddress(const InetAddress& serverAddr);
+
   /// Set connection callback.
   /// Not thread safe.
   void setConnectionCallback(const ConnectionCallback& cb)
